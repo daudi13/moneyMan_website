@@ -58,3 +58,27 @@ message.style.width = `120%`;
 message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 30 + `px`;
 
 document.documentElement.style.setProperty('--color-primary', 'orangered')
+
+
+//Attributes
+
+const logo = document.querySelector('.nav__logo');
+console.log(logo.alt); // Bankist logo
+console.log(logo.src); // http://127.0.0.1:5501/img/logo.png - absolute
+console.log(logo.className); // nav__logo
+
+// non-standard
+
+console.log(logo.designer); // undefined
+console.log(logo.getAttribute('designer')) // David Ouma
+
+// Settng attribute
+
+logo.setAttribute('company', 'Moneyman');
+logo.getAttribute('src'); // img/logo.png - relative
+
+//data attribute
+
+console.log(logo.dataset.versionNumber);
+
+//Classes

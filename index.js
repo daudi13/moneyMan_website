@@ -40,7 +40,7 @@ const message = document.createElement('div');
 message.classList.add('cookie-message');
 message.innerHTML = `we use cookies fir imporved functionality and analytics. <button class="btn btn--close-cookie">Got it</button>`;
 
-header.prepend(message);
+header.append(message);
 
 
 // removing the cookie message
@@ -51,3 +51,4 @@ document.querySelector('.btn--close-cookie').onclick = () => {
 
 // styles 
 
+message.style.backgroundColor = `#37383d`;
